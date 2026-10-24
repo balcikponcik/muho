@@ -56,13 +56,13 @@ fit();addEventListener('resize',fit);
 
 const GL=250,GR=550,GT=155,GB=302,SPOT={x:400,y:402};
 const MSGS={
- over:["Top Kadıköy'e gitti.","Uydu yörüngesine oturdu.","Yan sitedeki balkona selam."],
- wide:["Kale orada, Muho burada.","Korner bayrağını hedefledi galiba.","Otoparktaki arabalar tehlikede."],
- post:["Direk! Tıng sesi bütün mahalleye duyuldu.","Direkten döndü. Muho direkle küs."],
- bar:["Üst direk! Bir karış daha aşağı...","Üst direkten havalara."],
- save:["Kaleci rahat aldı.","Kaleci çay bardağını bırakmadan çıkardı."],
- whiff:["Muho topu ıskaladı, çimi vurdu.","Hava atışı. Kelimenin tam anlamıyla."],
- slow:["Top kaleciye pas gibi gitti.","Kaleci eğilip aldı, teşekkür etti."]
+ over:["Top Kadıköy'e gitti.","Uydu yörüngesine oturdu.","Yan sitedeki balkona selam.","Harun topun gidişini bakışlarıyla uğurladı."],
+ wide:["Kale orada, Muho burada.","Korner bayrağını hedefledi galiba.","Otoparktaki arabalar tehlikede.","Harun yerinden kıpırdamadı bile."],
+ post:["Direk! Tıng sesi bütün mahalleye duyuldu.","Direkten döndü. Muho direkle küs.","Direk! Harun direğe teşekkür ediyor."],
+ bar:["Üst direk! Bir karış daha aşağı...","Üst direkten havalara.","Üst direk! Harun gülmemek için zor duruyor."],
+ save:["Harun rahat aldı.","Harun çay bardağını bırakmadan çıkardı.","Harun uçtu, Muho düştü.","Harun: \"Başka var mı?\""],
+ whiff:["Muho topu ıskaladı, çimi vurdu.","Hava atışı. Kelimenin tam anlamıyla.","Muho ıskaladı, Harun alkışlıyor."],
+ slow:["Top Harun'a pas gibi gitti.","Harun eğilip aldı, teşekkür etti.","Harun topu alırken esnedi."]
 };
 const pick=a=>a[Math.random()*a.length|0];
 const lerp=(a,b,t)=>a+(b-a)*t, clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -159,8 +159,8 @@ function finish(){
   document.getElementById('shots').textContent=shots;
   document.getElementById('miss').textContent=misses;
   let m=pick(MSGS[type]);
-  if(misses===5)m+=' 5/5. İstikrar budur.';
-  if(misses===10)m+=' 10 atış, 0 gol. Rekor.';
+  if(misses===5)m+=' 5/5. Harun bugün geçit vermiyor.';
+  if(misses===10)m+=' 10 atış, 0 gol. Harun rekor kırdı.';
   document.getElementById('msg').textContent=m;
 }
 
